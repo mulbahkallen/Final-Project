@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: Verdana, sans-serif;
+			margin: 0;
+		}
+
+		.mySlides {
+			display: none;
+		}
+
+		.mySlides2 {
+			display: none;
+		}
+
+		img {
+			vertical-align: middle;
+		}
+
+		/* Slideshow container */
+		.slideshow-container {
+			max-width: 1000px;
+			position: relative;
+			margin: auto;
+		}
+
+		/* Position the image container (needed to position the left and right arrows) */
+		.container {
+			position: relative;
+		}
+
+		/* Caption text */
+		.text {
+			color: #f2f2f2;
+			font-size: 15px;
+			padding: 8px 12px;
+			position: absolute;
+			bottom: 8px;
+			width: 100%;
+			text-align: center;
+		}
+
+		/* Number text (1/3 etc) */
+		.numbertext {
+			color: #f2f2f2;
+			font-size: 12px;
+			padding: 8px 12px;
+			position: absolute;
+			top: 0;
+		}
+
+		/* Number text (1/3 etc) */
+		.numbertext2 {
+			color: #f2f2f2;
+			font-size: 12px;
+			padding: 8px 12px;
+			position: absolute;
+			top: 0;
+		}
+
+		/* The dots/bullets/indicators */
+		.dot {
+			height: 15px;
+			width: 15px;
+			margin: 0 2px;
+			background-color: #bbb;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 0.6s ease;
+		}
+
+		.active {
+			background-color: #717171;
+		}
+
+		/* Fading animation */
+		.fade {
+			-webkit-animation-name: fade;
+			-webkit-animation-duration: .4s;
+			animation-name: fade;
+			animation-duration: .4s;
+		}
+
+		/* Add a pointer when hovering over the thumbnail images */
+		.cursor {
+			cursor: pointer;
+		}
+
+		/* Next & previous buttons */
+		.prev,
+		.next {
+			cursor: pointer;
+			position: absolute;
+			top: 40%;
+			width: auto;
+			padding: 16px;
+			margin-top: -50px;
+			color: white;
+			font-weight: bold;
+			font-size: 20px;
+			border-radius: 0 3px 3px 0;
+			user-select: none;
+			-webkit-user-select: none;
+		}
+
+		/* Position the "next button" to the right */
+		.next {
+			right: 0;
+			border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover,
+		.next:hover {
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+
+		/* Container for image text */
+		.caption-container {
+			text-align: center;
+			background-color: #222;
+			padding: 2px 16px;
+			color: white;
+		}
+
+
+		.row1:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		/* Six columns side by side */
+		.column1 {
+			float: left;
+			width: 12.5%;
+		}
+
+		/* Add a transparency effect for thumnbail images */
+		.demo {
+			opacity: 0.6;
+		}
+
+		.active,
+		.demo:hover {
+			opacity: 1;
+		}
+
+
+		@-webkit-keyframes fade {
+			from {
+				opacity: .9
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		@keyframes fade {
+			from {
+				opacity: .9
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		/* On smaller screens, decrease text size */
+		@media only screen and (max-width: 300px) {
+			.text {
+				font-size: 11px
+			}
+		}
+	</style>
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+</head>
+
+<body>
+
+	<title> Medical Image Classification | MK </title>
+	<main>
+		<div class="cd-image-block">
+			<ul class="cd-images-list">
+				<li class="is-selected">
+					<a href="#0">
+						<h2>
+							<center>Medical Image Classification</center>
+						</h2>
+					</a>
+				</li>
+
+				<li>
+					<a href="#0">
+						<h2>Project One</h2>
+					</a>
+				</li>
+
+				<li>
+					<a href="#0">
+						<h2>Projects Two</h2>
+					</a>
+				</li>
+
+				<li>
+					<a href="#0">
+						<h2>Project Three</h2>
+					</a>
+				</li>
+
+			</ul> <!-- .cd-images-list -->
+		</div> <!-- .cd-image-block -->
+
+		<div class="cd-content-block">
+			<ul>
+				<li class="is-selected">
+					<div>
+						<center>
+							<h2>Three Tier Project</h2>
+						</center>
+
+						<center>
+							<p>
+								Deep Learning Neural Net
+								<br />
+								For
+								<br />
+								Assistive Diagnosis
+							</p>
+						</center>
+
+						<hr class="sep-2" />
+
+						<br />
+
+						<p>
+							Each project was designed as a simple binary image classification problem.
+						</p>
+
+						<p>
+							The same neural net base model is used in each project. Slight alterations are then made in order to improve the final score of each model.
+						</p>
+
+						<hr class="sep-2" />
+
+						<br />
+						<center>
+							<p>
+								Project 1 - Tumor Recognition
+								<p>
+						</center>
+
+						<div class="row">
+							<div class="column">
+								<img id="reflect" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/Y3.jpg" alt="Snow" width="275" height="300">
+							</div>
+							<div class="column">
+								<img id="reflect" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/1 no.jpeg" alt="Forest" width="300" height="300">
+							</div>
+						</div>
+
+						</p>
+
+						<br />
+						<br />
+						<br />
+						<br />
+
+						<hr class="sep-2" />
+
+						</p>
+						<center>
+							<p>
+								Project 2 - Malaria Detection
+								<p> <img id="reflect" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/cell_img.png" , class="center"></p>
+						</center>
+						</p>
+
+						<br />
+						<br />
+						<br />
+						<br />
+
+						<hr class="sep-2" />
+
+
+						<center>
+							<p>
+								Project 3 - Pneumonia Detection
+								<p>
+									<div class="row">
+										<div class="column">
+											<img id="reflect" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/person12_bacteria_46.jpeg" alt="Snow" width="275" height="300">
+										</div>
+										<div class="column">
+											<img id="reflect" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/IM-0371-0001.jpeg" alt="Forest" width="300" height="300">
+										</div>
+									</div>
+								</p>
+							</p>
+						</center>
+
+						<br />
+						<br />
+						<br />
+						<br />
+
+						<hr class="sep-2" />
+
+						<center>
+							<a href="http://scs.ryerson.ca/~aharley/vis/conv/">Neural Net Example</a>
+						</center>
+
+						<p>
+
+
+						</p>
+
+
+
+
+					</div>
+				</li>
+
+				<li>
+					<div>
+
+						<center>
+
+							<h2>Brain Tumor Classification</h2>
+
+							<p>
+								Binary Classification
+								<br />
+								Presence of a Tumor.
+							</p>
+
+							<hr class="sep-2" />
+
+						</center>
+
+						<p>
+							<center>
+								<h2 style="text-align:center">Images Shown Without Preprocessing</h2>
+							</center>
+
+							<center>
+
+								<div class="row">
+
+									<div id = 'reflect' class="slideshow-container" class="column">
+
+										<div class="mySlides fade">
+											<div class="numbertext">1 / 5</div>
+											<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/slideshow_imgs/yes/Y6.jpg" style="width:70%">
+											<div class="text">With Tumor</div>
+										</div>
+
+										<div class="mySlides fade">
+											<div class="numbertext">2 / 5</div>
+											<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/slideshow_imgs/yes/Y33.jpg" style="width:100%">
+											<div class="text">With Tumor</div>
+										</div>
+
+										<div class="mySlides fade">
+											<div class="numbertext">3 / 5</div>
+											<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/slideshow_imgs/yes/Y96.jpg" style="width:70%">
+											<div class="text">With Tumor</div>
+										</div>
+
+										<div class="mySlides fade">
+											<div class="numbertext">4 / 5</div>
+											<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/slideshow_imgs/yes/Y107.jpg" style="width:100%">
+											<div class="text">With Tumor</div>
+										</div>
+
+										<div class="mySlides fade">
+											<div class="numbertext">5 / 5</div>
+											<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/slideshow_imgs/yes/Y188.jpg" style="width:60%">
+											<div class="text">With Tumor</div>
+										</div>
+
+									</div>
+
+									<div id = 'reflect' class="slideshow-container" class="column">
+
+										<div class="mySlides fade">
+											<div class="numbertext">1 / 5</div>
+											<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/slideshow_imgs/no/1 no.jpeg" style="width:80%">
+											<div class="text">Without Tumor</div>
+										</div>
+
+										<div class="mySlides fade">
+											<div class="numbertext">2 / 5</div>
+											<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/slideshow_imgs/no/2 no.jpeg" style="width:80%">
+											<div class="text">Without Tumor</div>
+										</div>
+
+										<div class="mySlides fade">
+											<div class="numbertext">3 / 5</div>
+											<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/slideshow_imgs/no/N21.jpg" style="width:65%">
+											<div class="text">Without Tumor</div>
+										</div>
+
+										<div class="mySlides fade">
+											<div class="numbertext">4 / 5</div>
+											<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/slideshow_imgs/no/no 7.jpeg" style="width:75%">
+											<div class="text">Without Tumor</div>
+										</div>
+
+										<div class="mySlides fade">
+											<div class="numbertext">5 / 5</div>
+											<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/slideshow_imgs/no/7 no.jpg" style="width:100%">
+											<div class="text">Without Tumor</div>
+										</div>
+
+									</div>
+
+
+								</div>
+
+							</center>
+
+							<br>
+
+							<div style="text-align:center">
+								<span class="dot"></span>
+								<span class="dot"></span>
+								<span class="dot"></span>
+								<span class="dot"></span>
+								<span class="dot"></span>
+								<span class="dot"></span>
+								<span class="dot"></span>
+								<span class="dot"></span>
+								<span class="dot"></span>
+								<span class="dot"></span>
+							</div>
+
+							<script>
+								var slideIndex = 0;
+								showSlides();
+
+								function showSlides() {
+									var i;
+									var slides = document.getElementsByClassName("mySlides");
+									var dots = document.getElementsByClassName("dot");
+									for (i = 0; i < slides.length; i++) {
+										slides[i].style.display = "none";
+									}
+									slideIndex++;
+									if (slideIndex > slides.length) {
+										slideIndex = 1
+									}
+									for (i = 0; i < dots.length; i++) {
+										dots[i].className = dots[i].className.replace(" active", "");
+									}
+									slides[slideIndex - 1].style.display = "block";
+									dots[slideIndex - 1].className += " active";
+									setTimeout(showSlides, 2000); // Change image every 2 seconds
+								}
+							</script>
+
+						</p>
+
+						<center>
+
+							<br />
+							<p>
+								Model Scores
+								<br />
+								Recall of the model is 1.00
+								<br />
+								Precision of the model is 0.83
+								<br />
+								F1 of the model is 0.91
+								<br />
+								Accuracy of the Model is .80
+							</p>
+
+						</center>
+
+						<hr class="sep-2" />
+						<br />
+
+						<p>
+							Improvement Methods
+
+							<br />
+							<br />
+							More images would greatly improve the final accuracy score. Also there may be slight overfitting that is skewing my results for the better.
+						</p>
+					</div>
+				</li>
+
+				<li>
+					<div>
+
+						<center>
+
+							<h2>Cell Infection Classification</h2>
+
+							<p>
+								Binary Classification
+								<br />
+								Presence of Malaria Parasite
+							</p>
+
+						</center>
+
+						<hr class="sep-2" />
+
+						<center>
+							<p>
+								<h2 style="text-align:center">Image Examples</h2>
+							</p>
+
+
+							<p>
+								Infected
+							</p>
+
+						</center>
+
+						<center>
+							<div class="row">
+								<div class="column">
+									<img id="reflect2" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/malaria/yes/C37BP2_thinF_IMG_20150620_133238a_cell_97.png" alt="Snow" width="200" height="200">
+								</div>
+								<div class="column">
+									<img id="reflect2" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/malaria/yes/C38P3thinF_original_IMG_20150621_112043_cell_202.png" alt="Forest" width="200" height="200">
+								</div>
+								<div class="column">
+									<img id="reflect2" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/malaria/yes/C38P3thinF_original_IMG_20150621_112116_cell_204.png" alt="Forest" width="200" height="200">
+								</div>
+							</div>
+							<br />
+							<br />
+							<br />
+							<p>
+								Uninfected
+								<p>
+
+									<div class="row">
+										<div class="column">
+											<img id="reflect2" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/malaria/no/C3thin_original_IMG_20150608_163047_cell_192.png" alt="Snow" width="200" height="200">
+										</div>
+										<div class="column">
+											<img id="reflect2" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/malaria/no/C3thin_original_IMG_20150608_163047_cell_212.png" alt="Forest" width="200" height="200">
+										</div>
+										<div class="column">
+											<img id="reflect2" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/malaria/no/C3thin_original_IMG_20150608_163047_cell_214.png" alt="Forest" width="200" height="200">
+										</div>
+									</div>
+
+						</center>
+
+						<br />
+						<br />
+
+
+						<center>
+							<p>
+								Model Scores
+								<br />
+								Recall of the model is 0.90
+								<br />
+								Precision of the model is 0.93
+								<br />
+								F1 of the model is 0.92
+								<br />
+								Accuracy of the model 96%
+							</p>
+						</center>
+						<p>
+							Improvement Methods
+						</p>
+						<p>
+							Being the simplest of the projects, I was able to achieve a high accuracy score. I believe improving the score would only require a few adjustments to the neural net structure. Also the dataset consisted of 15,000 small images that were easily processed. This gave my model a chance to really "learn".
+						</p>
+
+					</div>
+				</li>
+
+				<li>
+					<div>
+
+						<center>
+
+							<h2>Lung Infection Classification</h2>
+							<p>
+								Binary Classification
+								<br />
+								Presence of Pneumonia
+							</p>
+
+						</center>
+
+						<hr class="sep-2" />
+
+
+						<h2 style="text-align:center">Lung Scan Gallery</h2>
+
+						<div class="container">
+							<div id = 'reflect' class="mySlides2">
+								<div class="numbertext2">1 / 8</div>
+								<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/YES/IM-0016-0001.jpeg" style="width:100%">
+							</div>
+
+							<div id = 'reflect' class="mySlides2">
+								<div class="numbertext2">2 / 8</div>
+								<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/YES/IM-0215-0001.jpeg" style="width:100%">
+							</div>
+
+							<div id = 'reflect' class="mySlides2">
+								<div class="numbertext2">3 / 8</div>
+								<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/YES/IM-0220-0001.jpeg" style="width:100%">
+							</div>
+
+							<div id = 'reflect' class="mySlides2">
+								<div class="numbertext2">4 / 8</div>
+								<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/YES/IM-0268-0001.jpeg" style="width:100%">
+							</div>
+
+							<div id = 'reflect' class="mySlides2">
+								<div class="numbertext2">5 / 8</div>
+								<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/NO/IM-0631-0001-0002.jpeg" style="width:100%">
+							</div>
+
+							<div id = 'reflect' class="mySlides2">
+								<div class="numbertext2">6 / 8</div>
+								<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/NO/IM-0439-0001-0001.jpeg" style="width:100%">
+							</div>
+
+							<div id = 'reflect' class="mySlides2">
+								<div class="numbertext2">7 / 8</div>
+								<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/NO/IM-0494-0001.jpeg" style="width:100%">
+							</div>
+
+							<div id = 'reflect' class="mySlides2">
+								<div class="numbertext2">8 / 8</div>
+								<img src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/NO/IM-0543-0001-0002.jpeg" style="width:100%">
+							</div>
+
+							<a class="prev" onclick="plusSlides1(-1)">❮</a>
+							<a class="next" onclick="plusSlides1(1)">❯</a>
+
+							<div class="caption-container">
+								<p id="caption"></p>
+							</div>
+
+							<div class="row1">
+								<div class="column1">
+									<img class="demo cursor" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/YES/IM-0016-0001.jpeg" style="width:100%" onclick="currentSlide1(1)" alt="Pneumonia">
+								</div>
+								<div class="column1">
+									<img class="demo cursor" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/YES/IM-0215-0001.jpeg" style="width:100%" onclick="currentSlide1(2)" alt="Pneumonia">
+								</div>
+								<div class="column1">
+									<img class="demo cursor" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/YES/IM-0220-0001.jpeg" style="width:100%" onclick="currentSlide1(3)" alt="Pneumonia">
+								</div>
+								<div class="column1">
+									<img class="demo cursor" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/YES/IM-0268-0001.jpeg" style="width:100%" onclick="currentSlide1(4)" alt="Pneumonia">
+								</div>
+								<div class="column1">
+									<img class="demo cursor" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/NO/IM-0631-0001-0002.jpeg" style="width:100%" onclick="currentSlide1(5)" alt="Healthy">
+								</div>
+								<div class="column1">
+									<img class="demo cursor" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/NO/IM-0439-0001-0001.jpeg" style="width:100%" onclick="currentSlide1(6)" alt="Healthy">
+								</div>
+								<div class="column1">
+									<img class="demo cursor" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/NO/IM-0494-0001.jpeg" style="width:100%" onclick="currentSlide1(7)" alt="Healthy">
+								</div>
+								<div class="column1">
+									<img class="demo cursor" src="/Users/mulbahkallen/Desktop/2-blocks-template-master/img/pneumonia/NO/IM-0543-0001-0002.jpeg" style="width:100%" onclick="currentSlide1(8)" alt="Healthy">
+								</div>
+							</div>
+						</div>
+
+						<script>
+							var slideIndex2 = 1;
+							showSlides1(slideIndex2);
+
+							function plusSlides1(x) {
+								showSlides1(slideIndex2 += x);
+							}
+
+							function currentSlide1(x) {
+								showSlides1(slideIndex2 = x);
+							}
+
+							function showSlides1(x) {
+								var a;
+								var slides2 = document.getElementsByClassName("mySlides2");
+								var dots2 = document.getElementsByClassName("demo");
+								var captionText2 = document.getElementById("caption");
+								if (x > slides2.length) {
+									slideIndex2 = 1
+								}
+								if (x < 1) {
+									slideIndex2 = slides2.length
+								}
+								for (a = 0; a < slides2.length; a++) {
+									slides2[a].style.display = "none";
+								}
+								for (a = 0; a < dots2.length; a++) {
+									dots2[a].className = dots2[a].className.replace(" active", "");
+								}
+								slides2[slideIndex2 - 1].style.display = "block";
+								dots2[slideIndex2 - 1].className += " active";
+								captionText2.innerHTML = dots2[slideIndex2 - 1].alt;
+							}
+						</script>
+
+						<br />
+						<br />
+
+						<center>
+
+							<p>
+								Model Scores
+							</p>
+							<p>
+								Recall of the model is 0.92
+								<br />
+								Precision of the model is 0.96
+								<br />
+								F1 of the model is 0.94
+								<br />
+								Accuracy of the model is 95%
+							</p>
+						</center>
+						<p>
+							Improvement Methods
+						</p>
+
+						<p>
+							The biggest issue I faced with this dataset of images was computing power. I had to significantly downsample from 10,000 images to about 3,000 in order to run my model.
+						</p>
+
+					</div>
+				</li>
+			</ul>
+
+			<button class="cd-close">Close</button>
+		</div> <!-- .cd-content-block -->
+
+		<ul class="block-navigation">
+			<li><button class="cd-prev inactive">&larr; Prev</button></li>
+			<li><button class="cd-next">Next &rarr;</button></li>
+		</ul> <!-- .block-navigation -->
+	</main> <!-- .cd-main -->
+
+	<script src="js/jquery-2.1.4.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+
+</html>
